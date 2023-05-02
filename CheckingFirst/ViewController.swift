@@ -6,9 +6,56 @@
 //
 
 import UIKit
+import CoreBluetooth
+import CoreBluetooth
+import SwiftUI
 
-class ViewController: UIViewController {
-   
+
+class BluetoothViewModel: NSObject, ObservableObject {
+    private var centralManager: CBCentralManager?
+    private var peripherals: [CBPeripheral] = []
+    @Published var peripheralNames: [String] = []
+    
+    override init() {
+        super.init()
+        self.centralManager = CBCentralManager(delegate: self, queue: .main)
+    }
+}
+
+extension BluetoothViewModel: CBCentralManagerDelegate {
+    func centralManagerDidUpdateState(_ central: CBCentralManager) {
+        if central.state == .poweredOn {
+            self.centralManager?.scanForPeripherals(withServices: nil)
+        }
+    }
+    
+    func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
+        if !peripherals.contains(peripheral) {
+            self.peripherals.append(peripheral)
+            self.peripheralNames.append(peripheral.name ?? "unnamed device")
+        }
+    }
+}
+
+struct ContentView: View {
+    @ObservedObject private var bluetoothViewModel = BluetoothViewModel()
+    
+    var body: some View {
+        NavigationView {
+            List(bluetoothViewModel.peripheralNames, id: \.self) { peripheral in
+                Text(peripheral)
+            }
+            .navigationTitle("Peripherals")
+        }
+    }
+}
+class ViewController: UIViewController  {
+   //bluetooth
+    var centralManager: CBCentralManager!
+    
+    @IBOutlet weak var clickCheck: UIButton!
+    
+    @IBOutlet weak var edit1: UITextField!
     var flag:Int = 1
     @IBOutlet weak var TestView: UILabel!
     var click = true
@@ -19,6 +66,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ContentView()
+        
+        
         // Do any additional setup after loading the view.
         TestView.text="My Bluetooth Testing"
         TestView.font = .italicSystemFont(ofSize: 12)
@@ -35,16 +85,41 @@ class ViewController: UIViewController {
         let blueOn = UITapGestureRecognizer(target: self, action: #selector(myblueisopen(sender:)))
         bluetoothON.isUserInteractionEnabled = true
         bluetoothON.addGestureRecognizer(blueOn)
+        //checking blueooth
+      //  centralmanager = CBCentralManager(delegate: Self, queue: nil)
+        ///button check
+        // button check
+        //edittext enable
+        edit1.becomeFirstResponder()
+       
         
         
+        let button=UITapGestureRecognizer(target: self, action: #selector(clickforcheck(sender:)))
+        clickCheck.isUserInteractionEnabled = true
+        clickCheck.addGestureRecognizer(button)
         
+           }
+    @objc func clickforcheck(sender : UITapGestureRecognizer)
+    {
+        if(edit1.text?.isEmpty==true)
+        {
+            var message = " helo";
+            TestView.text =  message
+        }
+        else{
         
+        }
     }
+    
     @objc func myblueisopen(sender : UITapGestureRecognizer)
     {
         if(second==1)
         {
-            TestView.text = "Cllicked for bluetooth open"
+            var cmc: CBPeripheralManager!
+            cmc = CBPeripheralManager.init()
+            
+            peripheralManagerDidUpdateState(peripheral: cmc)
+            ///TestView.text = "Cllicked for bluetooth open"
             second = second+1
             
         }
@@ -72,7 +147,43 @@ class ViewController: UIViewController {
         
         
     }
+    func peripheralManagerDidUpdateState(peripheral: CBPeripheralManager!) {
 
+        var statusMessage = ""
+        //TestView.text  = "clicked"
+
+        switch peripheral.state {
+        case .poweredOn:
+            statusMessage = "Bluetooth Status: Turned On"
+            TestView.text = statusMessage
+
+        case .poweredOff:
+            statusMessage = "Bluetooth Status: Turned Off"
+            TestView.text = statusMessage
+
+        case .resetting:
+            statusMessage = "Bluetooth Status: Resetting"
+            TestView.text = statusMessage
+
+        case .unauthorized:
+            statusMessage = "Bluetooth Status: Not Authorized"
+            TestView.text = statusMessage
+
+        case .unsupported:
+            statusMessage = "Bluetooth Status: Not Supported"
+            TestView.text = statusMessage
+
+        case .unknown:
+            statusMessage = "Bluetooth Status: Unknown"
+            TestView.text = statusMessage
+        }
+
+        print(statusMessage)
+
+        if peripheral.state == .poweredOff {
+            //TODO: Update this property in an App Manager class
+        }
+    }
 
 }
 
