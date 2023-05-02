@@ -25,11 +25,23 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jk" translatesAutoresizingMaskIntoConstraints="NO" id="m5Q-HE-vsB">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                             </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bluetooth Testing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JAw-Dz-fAd">
+                                                <rect key="frame" x="10" y="41" width="394" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="cA5-S2-7Dc"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="JAw-Dz-fAd" secondAttribute="trailing" constant="10" id="0kZ-FC-wWL"/>
+                                            <constraint firstItem="JAw-Dz-fAd" firstAttribute="top" secondItem="wly-Sk-l6K" secondAttribute="top" constant="41" id="4m3-bs-fYR"/>
                                             <constraint firstItem="m5Q-HE-vsB" firstAttribute="top" secondItem="wly-Sk-l6K" secondAttribute="top" id="8uH-Bs-Vms"/>
                                             <constraint firstAttribute="trailing" secondItem="m5Q-HE-vsB" secondAttribute="trailing" id="CIO-IZ-qw3"/>
+                                            <constraint firstItem="JAw-Dz-fAd" firstAttribute="leading" secondItem="wly-Sk-l6K" secondAttribute="leading" constant="10" id="XwL-L3-an4"/>
                                             <constraint firstItem="m5Q-HE-vsB" firstAttribute="leading" secondItem="wly-Sk-l6K" secondAttribute="leading" id="eB3-cq-hrm"/>
                                             <constraint firstAttribute="bottom" secondItem="m5Q-HE-vsB" secondAttribute="bottom" id="zEo-a1-gvx"/>
                                         </constraints>
@@ -40,16 +52,22 @@
                                     <constraint firstItem="wly-Sk-l6K" firstAttribute="height" secondItem="J1d-Vf-Mbx" secondAttribute="height" id="1yL-JB-cwn"/>
                                     <constraint firstItem="wly-Sk-l6K" firstAttribute="trailing" secondItem="J1d-Vf-Mbx" secondAttribute="trailing" id="4q7-tE-5Mh"/>
                                     <constraint firstItem="m5Q-HE-vsB" firstAttribute="top" secondItem="pbw-ZN-sy1" secondAttribute="top" id="9vb-mh-Ei4"/>
+                                    <constraint firstItem="JAw-Dz-fAd" firstAttribute="top" secondItem="pbw-ZN-sy1" secondAttribute="top" constant="41" id="DFL-3B-b0W"/>
                                     <constraint firstItem="m5Q-HE-vsB" firstAttribute="trailing" secondItem="pbw-ZN-sy1" secondAttribute="trailing" constant="414" id="DQA-sy-fan"/>
                                     <constraint firstItem="wly-Sk-l6K" firstAttribute="leading" secondItem="J1d-Vf-Mbx" secondAttribute="leading" id="EXC-eU-ZFN"/>
                                     <constraint firstItem="wly-Sk-l6K" firstAttribute="trailing" secondItem="pbw-ZN-sy1" secondAttribute="trailing" constant="414" id="Hve-Vc-BEZ"/>
+                                    <constraint firstItem="JAw-Dz-fAd" firstAttribute="trailing" secondItem="pbw-ZN-sy1" secondAttribute="trailing" constant="404" id="NDI-xA-ZTl"/>
+                                    <constraint firstItem="JAw-Dz-fAd" firstAttribute="height" secondItem="J1d-Vf-Mbx" secondAttribute="height" multiplier="0.0446429" id="TZb-Gc-xxE"/>
                                     <constraint firstItem="m5Q-HE-vsB" firstAttribute="width" secondItem="J1d-Vf-Mbx" secondAttribute="width" id="Ugp-p1-Cns"/>
                                     <constraint firstItem="wly-Sk-l6K" firstAttribute="width" secondItem="J1d-Vf-Mbx" secondAttribute="width" id="VQ7-6v-0NF"/>
                                     <constraint firstItem="wly-Sk-l6K" firstAttribute="bottom" secondItem="pbw-ZN-sy1" secondAttribute="bottom" constant="896" id="WYs-2u-xyF"/>
                                     <constraint firstItem="m5Q-HE-vsB" firstAttribute="height" secondItem="J1d-Vf-Mbx" secondAttribute="height" id="Xvg-DL-BcF"/>
                                     <constraint firstItem="wly-Sk-l6K" firstAttribute="top" secondItem="J1d-Vf-Mbx" secondAttribute="top" id="aId-pN-JWU"/>
+                                    <constraint firstItem="JAw-Dz-fAd" firstAttribute="bottom" secondItem="pbw-ZN-sy1" secondAttribute="bottom" constant="81" id="c7x-7E-X0V"/>
+                                    <constraint firstItem="JAw-Dz-fAd" firstAttribute="leading" secondItem="pbw-ZN-sy1" secondAttribute="leading" constant="10" id="eCi-3q-Ee2"/>
                                     <constraint firstItem="wly-Sk-l6K" firstAttribute="top" secondItem="pbw-ZN-sy1" secondAttribute="top" id="ieN-Qu-Umf"/>
                                     <constraint firstItem="m5Q-HE-vsB" firstAttribute="bottom" secondItem="pbw-ZN-sy1" secondAttribute="bottom" constant="896" id="m1f-vA-mPn"/>
+                                    <constraint firstItem="JAw-Dz-fAd" firstAttribute="width" secondItem="J1d-Vf-Mbx" secondAttribute="width" multiplier="0.951691" id="xJv-d4-Enb"/>
                                     <constraint firstItem="m5Q-HE-vsB" firstAttribute="leading" secondItem="pbw-ZN-sy1" secondAttribute="leading" id="yHd-xY-4QQ"/>
                                     <constraint firstItem="wly-Sk-l6K" firstAttribute="bottom" secondItem="J1d-Vf-Mbx" secondAttribute="bottom" id="yL1-vg-mcm"/>
                                 </constraints>
@@ -66,6 +84,9 @@
                             <constraint firstItem="0x5-RS-Ezi" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vNy-kF-bX0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="TestView" destination="JAw-Dz-fAd" id="hJr-i9-wcy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
