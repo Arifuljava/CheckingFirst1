@@ -64,6 +64,11 @@ class ViewController: UIViewController  {
      var bluetoothisOn = false
     var second:Int = 1
     
+    @IBOutlet weak var forDatePicker: UIDatePicker!
+    let dateFormatter = DateFormatter()
+    
+    @IBOutlet weak var clickonme: UISlider!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         ContentView()
@@ -97,8 +102,22 @@ class ViewController: UIViewController  {
         let button=UITapGestureRecognizer(target: self, action: #selector(clickforcheck(sender:)))
         clickCheck.isUserInteractionEnabled = true
         clickCheck.addGestureRecognizer(button)
+        //for date picker
+        dateFormatter.dateFormat = "MM/dd/yyyy"
+        forDatePicker.datePickerMode = .date
+        let datata=UITapGestureRecognizer(target: self, action: #selector(mydate(sender:)))
+        forDatePicker.isUserInteractionEnabled = true
+        forDatePicker.addGestureRecognizer(datata)
         
-           }
+        
+        
+           
+    }
+    @objc func mydate(sender : UITapGestureRecognizer)
+    {
+        TestView.text = dateFormatter.string(from: forDatePicker.date)
+        
+    }
     @objc func clickforcheck(sender : UITapGestureRecognizer)
     {
         if(edit1.text?.isEmpty==true)
@@ -107,6 +126,8 @@ class ViewController: UIViewController  {
             TestView.text =  message
         }
         else{
+            var get = edit1.text
+            TestView.text = get
         
         }
     }
