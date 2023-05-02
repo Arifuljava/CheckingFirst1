@@ -68,6 +68,9 @@ class ViewController: UIViewController  {
     let dateFormatter = DateFormatter()
     
     @IBOutlet weak var clickonme: UISlider!
+    //slider
+    
+    @IBOutlet weak var slider: UISlider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -108,10 +111,28 @@ class ViewController: UIViewController  {
         let datata=UITapGestureRecognizer(target: self, action: #selector(mydate(sender:)))
         forDatePicker.isUserInteractionEnabled = true
         forDatePicker.addGestureRecognizer(datata)
+        //uislider
+        slider.minimumValue =  0
+        slider.maximumValue = 100
+        //let dd = UISlider(frame: Ellipse, primaryAction: self)
         
-        
+       
         
            
+    }
+    @IBAction func vall(_ sender: UISlider) {
+        let roundedValue = round(sender.value)
+        sender.value = roundedValue
+        TestView.text = "Your Age is "+Int(sender.value).description    }
+    @IBAction func sliderValueChanged(_ sender: UISlider) {
+            let roundedValue = round(sender.value)
+            sender.value = roundedValue
+            TestView.text = "Your Age is "+Int(sender.value).description
+        }
+    @objc func myslider(sender : UISlider)
+    {
+        let roundedValue = round(sender.value)
+                sender.value = roundedValue 
     }
     @objc func mydate(sender : UITapGestureRecognizer)
     {

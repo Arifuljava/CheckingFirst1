@@ -84,6 +84,9 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="LO0-2e-hxN"/>
                                                 </constraints>
+                                                <connections>
+                                                    <action selector="vall:" destination="BYZ-38-t0r" eventType="valueChanged" id="IwO-sY-TTu"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -167,6 +170,7 @@
                         <outlet property="clickonme" destination="yFh-cT-uLe" id="zxh-9Q-0G6"/>
                         <outlet property="edit1" destination="KmA-l1-0cD" id="RHy-MK-erd"/>
                         <outlet property="forDatePicker" destination="tdJ-ud-tlg" id="oQM-gq-vem"/>
+                        <outlet property="slider" destination="yFh-cT-uLe" id="cnJ-bB-j56"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
