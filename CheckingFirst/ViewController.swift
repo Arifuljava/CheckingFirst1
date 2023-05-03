@@ -88,7 +88,7 @@ class ViewController: UIViewController  {
     override func viewDidLoad() {
         super.viewDidLoad()
         ContentView()
-        
+        views.append(<#T##newElement: UIView##UIView#>)
         
         
         // Do any additional setup after loading the view.
