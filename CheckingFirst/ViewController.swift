@@ -11,6 +11,7 @@ import CoreBluetooth
 import SwiftUI
 
 
+
 class BluetoothViewModel: NSObject, ObservableObject {
     private var centralManager: CBCentralManager?
     private var peripherals: [CBPeripheral] = []
@@ -72,6 +73,13 @@ class ViewController: UIViewController  {
     
     @IBOutlet weak var slider: UISlider!
     
+    
+    @IBOutlet weak var mystepper: UIStepper!
+    
+    @IBOutlet weak var plusstepper: UIStepper!
+    
+    
+    @IBOutlet weak var myswitch: UISwitch!
     override func viewDidLoad() {
         super.viewDidLoad()
         ContentView()
@@ -116,10 +124,22 @@ class ViewController: UIViewController  {
         slider.maximumValue = 100
         //let dd = UISlider(frame: Ellipse, primaryAction: self)
         
+       //stepper
        
         
-           
+       
     }
+    
+    @IBAction func switchvalue(_ sender: UISwitch) {
+        if(myswitch.isOn)
+        {
+            TestView.text = "On"
+        }
+        else
+        {
+            TestView.text = "Off"        }
+    }
+    
     @IBAction func vall(_ sender: UISlider) {
         let roundedValue = round(sender.value)
         sender.value = roundedValue
@@ -227,5 +247,7 @@ class ViewController: UIViewController  {
         }
     }
 
+    
 }
+
 

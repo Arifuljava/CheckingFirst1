@@ -88,6 +88,20 @@
                                                     <action selector="vall:" destination="BYZ-38-t0r" eventType="valueChanged" id="IwO-sY-TTu"/>
                                                 </connections>
                                             </slider>
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" wraps="YES" value="1" minimumValue="1" maximumValue="180" translatesAutoresizingMaskIntoConstraints="NO" id="KMO-gw-k3l">
+                                                <rect key="frame" x="160" y="470" width="94" height="32"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" systemColor="labelColor"/>
+                                            </stepper>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Thw-wu-jfS">
+                                                <rect key="frame" x="167" y="535" width="82" height="31"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="31" id="ale-np-HAg"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="switchvalue:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="Zd5-mc-M23"/>
+                                                </connections>
+                                            </switch>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -98,10 +112,14 @@
                                             <constraint firstItem="S5u-ec-4Fm" firstAttribute="top" secondItem="JAw-Dz-fAd" secondAttribute="bottom" constant="12" id="5N9-T9-XGv"/>
                                             <constraint firstItem="tdJ-ud-tlg" firstAttribute="leading" secondItem="wly-Sk-l6K" secondAttribute="leading" constant="10" id="5NC-Of-jT8"/>
                                             <constraint firstItem="yFh-cT-uLe" firstAttribute="top" secondItem="tdJ-ud-tlg" secondAttribute="bottom" constant="10" id="832-2P-KQY"/>
+                                            <constraint firstItem="Thw-wu-jfS" firstAttribute="leading" secondItem="wly-Sk-l6K" secondAttribute="leading" constant="167" id="8AD-ru-Zin"/>
                                             <constraint firstItem="m5Q-HE-vsB" firstAttribute="top" secondItem="wly-Sk-l6K" secondAttribute="top" id="8uH-Bs-Vms"/>
                                             <constraint firstAttribute="trailing" secondItem="m5Q-HE-vsB" secondAttribute="trailing" id="CIO-IZ-qw3"/>
                                             <constraint firstItem="tdJ-ud-tlg" firstAttribute="leading" secondItem="wly-Sk-l6K" secondAttribute="leading" constant="10" id="HXM-xq-z8f"/>
                                             <constraint firstAttribute="trailing" secondItem="KmA-l1-0cD" secondAttribute="trailing" constant="10" id="LVf-ze-miZ"/>
+                                            <constraint firstItem="Thw-wu-jfS" firstAttribute="top" secondItem="KMO-gw-k3l" secondAttribute="bottom" constant="33" id="Lj0-Nw-rsT"/>
+                                            <constraint firstAttribute="trailing" secondItem="Thw-wu-jfS" secondAttribute="trailing" constant="167" id="Nuv-1m-4xg"/>
+                                            <constraint firstItem="KMO-gw-k3l" firstAttribute="top" secondItem="yFh-cT-uLe" secondAttribute="bottom" constant="20" id="Oh1-2b-OrQ"/>
                                             <constraint firstItem="xEi-Tl-54C" firstAttribute="leading" secondItem="wly-Sk-l6K" secondAttribute="leading" constant="10" id="RcU-6F-Hog"/>
                                             <constraint firstItem="tdJ-ud-tlg" firstAttribute="top" secondItem="xEi-Tl-54C" secondAttribute="bottom" constant="10" id="Si6-EK-cUl"/>
                                             <constraint firstAttribute="trailing" secondItem="tdJ-ud-tlg" secondAttribute="trailing" constant="10" id="XRM-qJ-8dK"/>
@@ -111,6 +129,7 @@
                                             <constraint firstItem="tdJ-ud-tlg" firstAttribute="leading" secondItem="wly-Sk-l6K" secondAttribute="leading" constant="10" id="YJS-Ga-Ime"/>
                                             <constraint firstItem="xEi-Tl-54C" firstAttribute="top" secondItem="KmA-l1-0cD" secondAttribute="bottom" constant="10" id="ZUl-ec-K7F"/>
                                             <constraint firstItem="KmA-l1-0cD" firstAttribute="leading" secondItem="wly-Sk-l6K" secondAttribute="leading" constant="10" id="ZiC-6P-BTW"/>
+                                            <constraint firstItem="KMO-gw-k3l" firstAttribute="leading" secondItem="wly-Sk-l6K" secondAttribute="leading" constant="160" id="aJC-2R-JUd"/>
                                             <constraint firstItem="yFh-cT-uLe" firstAttribute="leading" secondItem="wly-Sk-l6K" secondAttribute="leading" constant="10" id="atJ-nj-tjE"/>
                                             <constraint firstItem="m5Q-HE-vsB" firstAttribute="leading" secondItem="wly-Sk-l6K" secondAttribute="leading" id="eB3-cq-hrm"/>
                                             <constraint firstAttribute="trailing" secondItem="yFh-cT-uLe" secondAttribute="trailing" constant="10" id="gv7-Uy-OIP"/>
@@ -121,6 +140,7 @@
                                             <constraint firstItem="S5u-ec-4Fm" firstAttribute="leading" secondItem="wly-Sk-l6K" secondAttribute="leading" constant="10" id="uqP-dU-boB"/>
                                             <constraint firstAttribute="trailing" secondItem="tdJ-ud-tlg" secondAttribute="trailing" constant="10" id="viH-I4-Ohe"/>
                                             <constraint firstItem="tdJ-ud-tlg" firstAttribute="top" secondItem="xEi-Tl-54C" secondAttribute="bottom" constant="10" id="vlY-eH-Amg"/>
+                                            <constraint firstAttribute="trailing" secondItem="KMO-gw-k3l" secondAttribute="trailing" constant="160" id="xMg-jV-8vN"/>
                                             <constraint firstAttribute="bottom" secondItem="m5Q-HE-vsB" secondAttribute="bottom" id="zEo-a1-gvx"/>
                                         </constraints>
                                     </view>
@@ -170,16 +190,22 @@
                         <outlet property="clickonme" destination="yFh-cT-uLe" id="zxh-9Q-0G6"/>
                         <outlet property="edit1" destination="KmA-l1-0cD" id="RHy-MK-erd"/>
                         <outlet property="forDatePicker" destination="tdJ-ud-tlg" id="oQM-gq-vem"/>
+                        <outlet property="mystepper" destination="KMO-gw-k3l" id="scK-zN-ldI"/>
+                        <outlet property="myswitch" destination="Thw-wu-jfS" id="X10-Z9-dyk"/>
+                        <outlet property="plusstepper" destination="KMO-gw-k3l" id="ad4-75-jO2"/>
                         <outlet property="slider" destination="yFh-cT-uLe" id="cnJ-bB-j56"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="218.84057971014494" y="-32.142857142857139"/>
+            <point key="canvasLocation" x="-597.10144927536237" y="-94.419642857142847"/>
         </scene>
     </scenes>
     <resources>
         <image name="jk" width="3840" height="2160"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
