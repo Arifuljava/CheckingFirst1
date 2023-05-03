@@ -80,9 +80,15 @@ class ViewController: UIViewController  {
     
     
     @IBOutlet weak var myswitch: UISwitch!
+    
+    @IBOutlet weak var fragmentSegmentation: UISegmentedControl!
+    
+    @IBOutlet weak var viewContainerr: UIView!
+    var views = Array<UIView>()
     override func viewDidLoad() {
         super.viewDidLoad()
         ContentView()
+        
         
         
         // Do any additional setup after loading the view.

@@ -102,6 +102,22 @@
                                                     <action selector="switchvalue:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="Zd5-mc-M23"/>
                                                 </connections>
                                             </switch>
+                                            <segmentedControl opaque="NO" contentMode="center" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wfA-dw-ynB">
+                                                <rect key="frame" x="10" y="576" width="394" height="41"/>
+                                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="NWN-Et-3Vy"/>
+                                                </constraints>
+                                                <segments>
+                                                    <segment title="Home Fragment"/>
+                                                    <segment title="Profile Fragment"/>
+                                                </segments>
+                                            </segmentedControl>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7zH-E4-XOe">
+                                                <rect key="frame" x="10" y="624" width="394" height="242"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -123,10 +139,12 @@
                                             <constraint firstItem="xEi-Tl-54C" firstAttribute="leading" secondItem="wly-Sk-l6K" secondAttribute="leading" constant="10" id="RcU-6F-Hog"/>
                                             <constraint firstItem="tdJ-ud-tlg" firstAttribute="top" secondItem="xEi-Tl-54C" secondAttribute="bottom" constant="10" id="Si6-EK-cUl"/>
                                             <constraint firstAttribute="trailing" secondItem="tdJ-ud-tlg" secondAttribute="trailing" constant="10" id="XRM-qJ-8dK"/>
+                                            <constraint firstItem="wfA-dw-ynB" firstAttribute="top" secondItem="Thw-wu-jfS" secondAttribute="bottom" constant="10" id="Xb0-pL-j1I"/>
                                             <constraint firstItem="JAw-Dz-fAd" firstAttribute="leading" secondItem="wly-Sk-l6K" secondAttribute="leading" constant="10" id="XwL-L3-an4"/>
                                             <constraint firstItem="tdJ-ud-tlg" firstAttribute="top" secondItem="xEi-Tl-54C" secondAttribute="bottom" constant="10" id="YII-ib-W6G"/>
                                             <constraint firstAttribute="trailing" secondItem="S5u-ec-4Fm" secondAttribute="trailing" constant="10" id="YIk-v1-kjb"/>
                                             <constraint firstItem="tdJ-ud-tlg" firstAttribute="leading" secondItem="wly-Sk-l6K" secondAttribute="leading" constant="10" id="YJS-Ga-Ime"/>
+                                            <constraint firstItem="wfA-dw-ynB" firstAttribute="leading" secondItem="wly-Sk-l6K" secondAttribute="leading" constant="10" id="ZJl-gP-N7V"/>
                                             <constraint firstItem="xEi-Tl-54C" firstAttribute="top" secondItem="KmA-l1-0cD" secondAttribute="bottom" constant="10" id="ZUl-ec-K7F"/>
                                             <constraint firstItem="KmA-l1-0cD" firstAttribute="leading" secondItem="wly-Sk-l6K" secondAttribute="leading" constant="10" id="ZiC-6P-BTW"/>
                                             <constraint firstItem="KMO-gw-k3l" firstAttribute="leading" secondItem="wly-Sk-l6K" secondAttribute="leading" constant="160" id="aJC-2R-JUd"/>
@@ -134,6 +152,7 @@
                                             <constraint firstItem="m5Q-HE-vsB" firstAttribute="leading" secondItem="wly-Sk-l6K" secondAttribute="leading" id="eB3-cq-hrm"/>
                                             <constraint firstAttribute="trailing" secondItem="yFh-cT-uLe" secondAttribute="trailing" constant="10" id="gv7-Uy-OIP"/>
                                             <constraint firstAttribute="trailing" secondItem="tdJ-ud-tlg" secondAttribute="trailing" constant="10" id="iC9-sg-RJv"/>
+                                            <constraint firstAttribute="trailing" secondItem="wfA-dw-ynB" secondAttribute="trailing" constant="10" id="iR0-qz-bHd"/>
                                             <constraint firstItem="KmA-l1-0cD" firstAttribute="top" secondItem="S5u-ec-4Fm" secondAttribute="bottom" constant="10" id="pEr-O0-7ac"/>
                                             <constraint firstItem="tdJ-ud-tlg" firstAttribute="top" secondItem="xEi-Tl-54C" secondAttribute="bottom" constant="12" id="sfI-Zj-Ca8"/>
                                             <constraint firstItem="tdJ-ud-tlg" firstAttribute="leading" secondItem="wly-Sk-l6K" secondAttribute="leading" constant="10" id="spD-We-gbs"/>
@@ -190,10 +209,12 @@
                         <outlet property="clickonme" destination="yFh-cT-uLe" id="zxh-9Q-0G6"/>
                         <outlet property="edit1" destination="KmA-l1-0cD" id="RHy-MK-erd"/>
                         <outlet property="forDatePicker" destination="tdJ-ud-tlg" id="oQM-gq-vem"/>
+                        <outlet property="fragmentSegmentation" destination="wfA-dw-ynB" id="TpH-j7-rXQ"/>
                         <outlet property="mystepper" destination="KMO-gw-k3l" id="scK-zN-ldI"/>
                         <outlet property="myswitch" destination="Thw-wu-jfS" id="X10-Z9-dyk"/>
                         <outlet property="plusstepper" destination="KMO-gw-k3l" id="ad4-75-jO2"/>
                         <outlet property="slider" destination="yFh-cT-uLe" id="cnJ-bB-j56"/>
+                        <outlet property="viewContainerr" destination="7zH-E4-XOe" id="6Yg-dm-Sau"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -208,6 +229,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

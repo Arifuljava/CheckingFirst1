@@ -16,6 +16,10 @@
 		25374F4C29FE76E300BA9804 /* CheckingFirstTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25374F4B29FE76E300BA9804 /* CheckingFirstTests.swift */; };
 		25374F5629FE76E300BA9804 /* CheckingFirstUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25374F5529FE76E300BA9804 /* CheckingFirstUITests.swift */; };
 		25374F5829FE76E300BA9804 /* CheckingFirstUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25374F5729FE76E300BA9804 /* CheckingFirstUITestsLaunchTests.swift */; };
+		254EB38A2A02024300AE8E78 /* Homefragment.xib in Resources */ = {isa = PBXBuildFile; fileRef = 254EB3892A02024300AE8E78 /* Homefragment.xib */; };
+		254EB38C2A0202C900AE8E78 /* ProfileFragment.xib in Resources */ = {isa = PBXBuildFile; fileRef = 254EB38B2A0202C900AE8E78 /* ProfileFragment.xib */; };
+		254EB38E2A02035700AE8E78 /* Homefragment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254EB38D2A02035700AE8E78 /* Homefragment.swift */; };
+		254EB3902A02038700AE8E78 /* ProfileFragment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254EB38F2A02038700AE8E78 /* ProfileFragment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		25374F5129FE76E300BA9804 /* CheckingFirstUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CheckingFirstUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		25374F5529FE76E300BA9804 /* CheckingFirstUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckingFirstUITests.swift; sourceTree = "<group>"; };
 		25374F5729FE76E300BA9804 /* CheckingFirstUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckingFirstUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		254EB3892A02024300AE8E78 /* Homefragment.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Homefragment.xib; sourceTree = "<group>"; };
+		254EB38B2A0202C900AE8E78 /* ProfileFragment.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileFragment.xib; sourceTree = "<group>"; };
+		254EB38D2A02035700AE8E78 /* Homefragment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homefragment.swift; sourceTree = "<group>"; };
+		254EB38F2A02038700AE8E78 /* ProfileFragment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFragment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +114,10 @@
 				25374F3D29FE76E300BA9804 /* Assets.xcassets */,
 				25374F3F29FE76E300BA9804 /* LaunchScreen.storyboard */,
 				25374F4229FE76E300BA9804 /* Info.plist */,
+				254EB3892A02024300AE8E78 /* Homefragment.xib */,
+				254EB38B2A0202C900AE8E78 /* ProfileFragment.xib */,
+				254EB38D2A02035700AE8E78 /* Homefragment.swift */,
+				254EB38F2A02038700AE8E78 /* ProfileFragment.swift */,
 			);
 			path = CheckingFirst;
 			sourceTree = "<group>";
@@ -231,8 +243,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				254EB38C2A0202C900AE8E78 /* ProfileFragment.xib in Resources */,
 				25374F4129FE76E300BA9804 /* LaunchScreen.storyboard in Resources */,
 				25374F3E29FE76E300BA9804 /* Assets.xcassets in Resources */,
+				254EB38A2A02024300AE8E78 /* Homefragment.xib in Resources */,
 				25374F3C29FE76E200BA9804 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,6 +274,8 @@
 			files = (
 				25374F3929FE76E200BA9804 /* ViewController.swift in Sources */,
 				25374F3529FE76E200BA9804 /* AppDelegate.swift in Sources */,
+				254EB3902A02038700AE8E78 /* ProfileFragment.swift in Sources */,
+				254EB38E2A02035700AE8E78 /* Homefragment.swift in Sources */,
 				25374F3729FE76E200BA9804 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
